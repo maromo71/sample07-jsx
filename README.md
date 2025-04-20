@@ -1,40 +1,128 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
-## Getting Started
+# 🗂️ Gerenciador de Tarefas com Next.js + Firebase
 
-First, run the development server:
+Este é um projeto **didático** criado com **Next.js** (usando JSX), **Firebase (Auth + Firestore)** e estilização com **CSS tradicional**.
+
+Os alunos aprenderão como construir um CRUD de tarefas com autenticação, protegendo rotas, interagindo com banco de dados em tempo real e publicando a aplicação na **Vercel**.
+
+---
+
+## 🚀 Funcionalidades
+
+- ✅ Cadastro e login de usuários (Firebase Authentication)
+- ✅ Rota protegida para acesso à área administrativa
+- ✅ Cadastro, edição e exclusão de tarefas (Firestore)
+- ✅ Armazenamento de sessão no `localStorage`
+- ✅ Estilização com CSS puro
+- ✅ Pronto para deploy na Vercel
+
+---
+
+## 🧑‍💻 Tecnologias Utilizadas
+
+- [Next.js](https://nextjs.org/)
+- [Firebase (v9 Modular)](https://firebase.google.com/)
+- [React](https://reactjs.org/)
+- HTML5, JSX e CSS3
+
+---
+
+## 🛠️ Instalação Local
+
+### 1. Clone o projeto
+
+```bash
+git clone https://github.com/seuusuario/gerenciador-tarefas-nextjs.git
+cd gerenciador-tarefas-nextjs
+```
+
+### 2. Instale as dependências
+
+```bash
+npm install
+```
+
+### 3. Configure o Firebase
+
+- Crie um projeto no [Firebase Console](https://console.firebase.google.com/)
+- Ative **Authentication → Email/Password**
+- Ative **Firestore Database**
+- Copie a **configuração do Firebase** para o arquivo:
+
+```js
+// lib/firebase.js
+const firebaseConfig = {
+  apiKey: "SUA_API_KEY",
+  authDomain: "SEU_DOMINIO.firebaseapp.com",
+  projectId: "SEU_PROJECT_ID",
+  ...
+};
+```
+
+---
+
+### 4. Inicie o projeto
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Acesse: [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## ☁️ Deploy na Vercel
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+### 1. Suba o projeto no GitHub
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+git init
+git add .
+git commit -m "Versão inicial"
+git remote add origin https://github.com/seuusuario/nome-do-repo.git
+git push -u origin main
+```
 
-## Learn More
+### 2. Faça login na [Vercel](https://vercel.com)
 
-To learn more about Next.js, take a look at the following resources:
+- Clique em **"Add New Project"**
+- Selecione seu repositório
+- Aceite as configurações padrões
+- Clique em **Deploy**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+A Vercel irá gerar uma URL pública para seu projeto 🎉
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📁 Estrutura do Projeto
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+/pages
+  ├── index.jsx       # Login
+  ├── register.jsx    # Cadastro
+  ├── admin.jsx       # Área protegida
+  └── _app.jsx        # Layout global
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+/components
+  ├── Header.jsx
+  ├── Footer.jsx
+  └── AdminContent.jsx
+
+/lib
+  └── firebase.js     # Conexão com Firebase
+
+/styles
+  └── globals.css     # Estilos globais
+```
+
+---
+
+## 👨‍🏫 Autor
+
+Prof. Marcos Roberto de Moraes – [@maromo71](https://github.com/maromo71)
+
+---
+
+## 📚 Licença
+
+Este projeto é didático e livre para uso em sala de aula ou estudos pessoais.
