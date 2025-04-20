@@ -1,0 +1,64 @@
+/* components/style.css */
+
+.form-control {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+  
+  input, textarea {
+    width: 90%;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  button {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    margin: 0.1rem;
+  }
+  
+  button:hover {
+    opacity: 0.9;
+  }
+  
+  .btn-success {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+  }
+
+  /* links */
+.btn-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .btn-link:hover {
+    text-decoration: underline;
+  }
+  
+  
